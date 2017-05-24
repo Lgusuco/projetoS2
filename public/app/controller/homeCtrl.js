@@ -2,6 +2,8 @@ angular.module('s2Project')
 .controller('homeCtrl', function($scope, homeApi) {
 
 	$scope.message = false;
+	$scope.sortType     = 'tipo'; 
+ 	$scope.sortReverse  = false; 
 
 	$scope.operacao = {
 		'tipo': 'Depositar'
@@ -66,6 +68,18 @@ angular.module('s2Project')
 		},function (error){
 			console.log('error');
 		});
+	}
+
+	$scope.order = function(valor) {
+		if(valor == 0)
+			$scope.sortType     = 'tipo'; 
+		else
+			$scope.sortType     = 'valor'; 
+		
+		if($scope.sortReverse)
+			$scope.sortReverse = false
+		else
+			$scope.sortReverse = true
 	}
 
 

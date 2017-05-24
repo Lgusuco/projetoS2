@@ -199,3 +199,7 @@ header {
   font-size: 1.5em;
   font-weight: bold;
 }
+.sacar {
+  color: red;
+  font-weight: bold;
+}

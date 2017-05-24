@@ -29,13 +29,13 @@
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<tr>
-							<th>Tipo</th>
-							<th>Valor</th> 
+							<th><button class="btn btn-default btn-lg" ng-click="order(0)">Tipo</button></th>
+							<th><button class="btn btn-default btn-lg" ng-click="order(1)">Valor</button></th> 
 							<th></th>
 						</tr>
-						<tr ng-repeat="info in getlistaValorConta">
+						<tr ng-repeat="info in getlistaValorConta | orderBy:sortType:sortReverse">
 							<td>{{info.tipo}}</td>
-							<td>{{info.valor | finance:true:2}}</td> 
+							<td ng-class="{sacar:info.tipo=='Sacar'}">{{info.valor | finance:true:2}}</td> 
 							<td><button class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="removeItem(info)"></span></button></td>
 						</tr>
 					</table>

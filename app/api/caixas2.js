@@ -2,17 +2,6 @@ var api = {}
 
 var listaValorConta = [
 
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' },
-		// { _id: 1, tipo: 'Saque', 'valor': '100' }
 	];
 
 
