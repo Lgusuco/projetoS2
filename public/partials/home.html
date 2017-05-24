@@ -1,0 +1,49 @@
+<header>
+	<div class="header-logo">
+		<img src="assets/images/logo.png" alt="">
+	</div>
+</header>
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="alert alert-danger" ng-if="message">
+			<h3>{{message}}</h3>
+		</div>
+		<div class="box">
+			<div class="box-header">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="radio-inline">
+							<input type="radio" ng-model="operacao.tipo" value="Sacar" CHECKED> Sacar
+						</label>
+						<label class="radio-inline">
+							<input type="radio" ng-model="operacao.tipo" value="Depositar" checked> Depositar 
+						</label>
+					</div>
+					<div class="form-group">
+						<input type="number" step="0.01" class="form-control" placeholder="Valor R$" ng-model="operacao.valor">
+						<button type="submit" class="btn btn-success" ng-click="insereValor(operacao)">{{operacao.tipo}}</button>
+					</div>
+				</form>
+			</div>
+			<div class="box-content">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<tr>
+							<th>Tipo</th>
+							<th>Valor</th> 
+							<th></th>
+						</tr>
+						<tr ng-repeat="info in getlistaValorConta">
+							<td>{{info.tipo}}</td>
+							<td>{{info.valor | finance:true:2}}</td> 
+							<td><button class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="removeItem(info)"></span></button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="box-footer">
+				<h3>{{total | finance:true:2}}</h3>{{info}}
+			</div>
+		</div>
+	</div>
+</div>

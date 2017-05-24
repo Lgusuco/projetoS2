@@ -1,0 +1,26 @@
+{
+  "name": "s2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Leonardo Gusmão"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "angular": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "reset-css": "^2.2.0",
+    "angular-br-filters": "^0.7.0",
+    "angular-i18n": "^1.6.4"
+  }
+}

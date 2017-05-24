@@ -1,0 +1,84 @@
+@import '../../bower_components/reset-css/reset';
+@import '../../bower_components/bootstrap/dist/css/bootstrap.css';
+
+// VAR
+@cor-header: #1b7eb8;
+
+// MIX
+
+.border-radius {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.border-radius-top {
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-khtml-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
+.border-radius-bot {
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-khtml-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+// HEADER
+
+header {
+	background-color: @cor-header;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+// BOX SAQUE/DEPOSITO
+
+.box {
+	border: 1px solid #ccc;
+	.border-radius;
+	font-size: 1.2em;
+
+	.box-header {
+		background-color: @cor-header;
+		width: 100%;
+		.border-radius-top;
+		padding: 20px;
+		color: #fff;
+		text-align: center;
+
+		input[type="text"] {
+			margin-left: 10px;
+		}
+	}
+}
+
+.table-responsive {
+	tr {
+		text-align: center;
+		th {
+			text-align: center;
+		}
+	}
+}
+
+.box-content {
+	height: 500px;
+	overflow: auto;
+}
+
+.box-footer {
+	text-align: center;
+	background-color: @cor-header;
+	color: #fff;
+	padding: 20px;
+	.border-radius-bot;
+
+	h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+}

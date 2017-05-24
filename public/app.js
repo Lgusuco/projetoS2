@@ -1,0 +1,1 @@
+angular.module('s2Project', ['ngRoute', 'ngResource', 'idf.br-filters']);
